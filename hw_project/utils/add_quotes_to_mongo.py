@@ -1,13 +1,12 @@
 import json
 from bson.objectid import ObjectId
-
 from pymongo import MongoClient
 
-client = MongoClient("mongodb://localhost")
+client = MongoClient('mongodb://localhost')
 
 db = client.hw
 
-with open("quotes.json", "r", encoding="utf-8") as fd:
+with open('quotes.json', 'r', encoding='utf-8') as fd:
     quotes = json.load(fd)
 
 for quote in quotes:

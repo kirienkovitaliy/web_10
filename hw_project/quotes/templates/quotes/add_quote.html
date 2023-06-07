@@ -1,0 +1,32 @@
+{% extends "quotes/base.html" %}
+
+{% block content %}
+<h1></h1>
+<form method="post">
+    {% csrf_token %}
+    <div class="form-row">
+        <div class="mb-3">
+            <label class="form-label">Author fullname</label>
+            {{form.name}}
+        </div>
+        <span>{{form.errors.name}}</span>
+    </div>
+    <div class="form-row">
+        <div class="mb-3">
+            <label class="form-label">Quote</label>
+            {{form.quote}}
+        </div>
+        <span>{{form.errors.quote}}</span>
+    </div>
+    <div class="form-row">
+        <div class="mb-3">
+            <label class="form-label">Tags</label>
+            {{form.tag}}
+        </div>
+        <span>{{form.errors.tag}}</span>
+    </div>
+
+    <a href="/" class="btn btn-primary">Confirm</a>
+</form>
+
+{% endblock %}

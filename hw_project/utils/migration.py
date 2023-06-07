@@ -1,14 +1,13 @@
-import os
 import django
-
+import os
 from pymongo import MongoClient
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "hw_project.settings")
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hw_project.settings')
 django.setup()
 
 from quotes.models import Quote, Tag, Author  # noqa
 
-client = MongoClient("mongodb://localhost")
+client = MongoClient('mongodb://localhost')
 
 db = client.hw
 
