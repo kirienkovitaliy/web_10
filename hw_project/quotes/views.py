@@ -28,10 +28,10 @@ class AddAuthorView(View):
     form_class = AuthorForm
     template_name = "quotes/add_author.html"
 
-    def dispatch(self, request, *args, **kwargs):
-        if request.user.is_authenticated:
-            return redirect(to="quotes:root")
-        return super(AddAuthorView, self).dispatch(request, *args, **kwargs)
+    # def dispatch(self, request, *args, **kwargs):
+    # if request.user.is_authenticated:
+    # return redirect(to="quotes:root")
+    # return super(AddAuthorView, self).dispatch(request, *args, **kwargs)
 
     def get(self, request):
         return render(request, self.template_name, {"form": self.form_class})
@@ -53,9 +53,9 @@ class AddQuoteView(View):
     template_name = "quotes/add_quote.html"
 
     # def dispatch(self, request, *args, **kwargs):
-        # if request.user.is_authenticated:
-            # return redirect(to="quotes:root")
-        # return super(AddQuoteView, self).dispatch(request, *args, **kwargs)
+    # if request.user.is_authenticated:
+    # return redirect(to="quotes:root")
+    # return super(AddQuoteView, self).dispatch(request, *args, **kwargs)
 
     def get(self, request):
         return render(request, self.template_name, {"form": self.form_class})
