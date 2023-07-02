@@ -10,6 +10,8 @@ packages = [{include = "web_10"}]
 python = "^3.11"
 django = "^4.2.1"
 pymongo = "^4.3.3"
+django-environ = "^0.10.0"
+psycopg2-binary = "^2.9.6"
 
 
 [build-system]
